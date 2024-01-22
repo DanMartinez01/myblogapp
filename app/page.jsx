@@ -17,9 +17,8 @@ export default  async function Home() {
  const posts=await getPosts()
  console.log("posts",posts)
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Hello blog!</h1>
-      <Link href={'/add-post'}>Add Post</Link>
+    <main className="bg-yellow-200">
+      <Link href={'/add-post'} className="text-black font-bold">Add Post</Link>
       <h1>Feed</h1>
       {
         posts.map((post) => {

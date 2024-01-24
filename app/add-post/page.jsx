@@ -37,11 +37,11 @@ export default function AddPost(){
   };
 
     return (
-        <main>
+        <div className="max-w-screen-sm w-2/4 my-2 px-4">
             <Link href={'/'}>View Feed</Link>
-        <h1>Add Post</h1>
-        <form onSubmit={handleSubmit}>
-        <div>
+        <form onSubmit={handleSubmit} className="my-8">
+        <h1>Add Comment:</h1>
+        <div className="flex flex-col mt-4">
           <label htmlFor="title">Title:</label>
           <input
             type="text"
@@ -49,19 +49,26 @@ export default function AddPost(){
             value={title}
             onChange={handleTitleChange}
             required
+            className="text-black"
           />
         </div>
-        <div>
+        <div className="flex flex-col">
           <label htmlFor="content">Content:</label>
           <textarea
             id="content"
             value={content}
             onChange={handleContentChange}
             required
+            className="text-black"
           />
         </div>
-        <button type="submit">Submit</button>
+        <div className="flex justify-center">
+      <button type="submit" 
+        className="border border-indigo-600 bg-black text-white rounded-lg py-2 px-4 font-semibold mt-10" >
+          Submit</button>    
+        </div>
       </form>
-    </main>
+      
+    </div>
     )
 }

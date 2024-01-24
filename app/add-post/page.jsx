@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function AddPost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);

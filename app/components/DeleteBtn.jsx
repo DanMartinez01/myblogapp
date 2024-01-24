@@ -2,7 +2,7 @@
 // import { useRouter } from "next/navigation"
 
 export default function DeleteBtn({ postId }) {
-  const router = useRouter();
+  //   const router = useRouter();
 
   async function handleClick() {
     try {

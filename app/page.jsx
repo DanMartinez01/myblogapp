@@ -14,6 +14,7 @@ async function getPosts() {
     },
   });
   return posts;
+  revalidate: 1;
 }
 export default async function Home() {
   const posts = await getPosts();

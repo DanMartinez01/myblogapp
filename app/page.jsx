@@ -17,7 +17,6 @@ async function getPosts() {
 }
 export default async function Home() {
   const posts = await getPosts();
-  //  console.log("posts",posts)
   return (
     <main className="flex flex-col max-w-screen-lg mx-auto">
       <Article />

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 export default function AddPost() {
   const [title, setTitle] = useState("");
@@ -29,7 +29,7 @@ export default function AddPost() {
         body: JSON.stringify({ title, content }),
       });
 
-      router.refresh();
+      // router.refresh();
     } catch (error) {
       console.error(error);
     }

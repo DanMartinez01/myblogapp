@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 export default function AddPost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");

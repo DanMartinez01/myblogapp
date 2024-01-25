@@ -6,9 +6,13 @@ export default function DeleteBtn({ postId }) {
 
   async function handleClick() {
     try {
-      await fetch(`/api/post/${postId}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `/api/post/${postId}`,
+        {
+          method: "DELETE",
+        },
+        { cache: "no-store" }
+      );
       router.refresh();
     } catch (e) {
       console.error(e);

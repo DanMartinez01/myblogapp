@@ -4,18 +4,38 @@ import Post from "./components/Post";
 import Article from "./components/Article";
 import Footer from "./components/Footer";
 
+// async function getPosts() {
+//   const posts = await prisma.post.findMany({
+//     where: { published: true },
+//     include: {
+//       author: {
+//         select: { name: true },
+//       },
+//     },
+//   });
+//   console.log(posts);
+//   return posts;
+// }
 async function getPosts() {
-  const posts = await prisma.post.findMany({
-    where: { published: true },
-    include: {
-      author: {
-        select: { name: true },
+  try {
+    const posts = await prisma.post.findMany({
+      where: { published: true },
+      include: {
+        author: {
+          select: { name: true },
+        },
       },
-    },
-  });
-  return posts;
-  console.log(posts);
+    });
+
+    console.log(posts);
+
+    return posts;
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return [];
+  }
 }
+
 export default async function Home() {
   const posts = await getPosts();
   return (

@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   const res = await request.json();
   const { title, content } = res;
+  res.setHeader("Cache-Control", "no-store");
   const result = await prisma.post.create({
     data: {
       title,

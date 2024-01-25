@@ -19,3 +19,5 @@ export async function POST(request) {
 
   return NextResponse.json({ result });
 }
+
+// pages/api/posts.js

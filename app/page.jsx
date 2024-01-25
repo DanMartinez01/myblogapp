@@ -4,7 +4,7 @@ import Post from "./components/Post";
 import Article from "./components/Article";
 import Footer from "./components/Footer";
 
-async function getPosts() {
+export async function getPosts() {
   const posts = await prisma.post.findMany({
     where: { published: true },
     include: {
@@ -13,7 +13,6 @@ async function getPosts() {
       },
     },
   });
-  console.log(posts);
   return posts;
 }
 
@@ -42,3 +41,13 @@ export default async function Home() {
     </main>
   );
 }
+
+// export async function getServerSideProps() {
+//   const posts = await getPosts();
+
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }

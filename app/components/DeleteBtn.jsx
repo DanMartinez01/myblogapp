@@ -1,15 +1,15 @@
 "use client";
-// import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation";
 
 export default function DeleteBtn({ postId }) {
-  //   const router = useRouter();
+  const router = useRouter();
 
   async function handleClick() {
     try {
       await fetch(`/api/post/${postId}`, {
         method: "DELETE",
       });
-      // router.refresh()
+      router.refresh();
     } catch (e) {
       console.error(e);
     }

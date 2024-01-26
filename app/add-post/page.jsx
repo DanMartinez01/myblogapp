@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-// Opt out of caching for all data requests in the route segment
-export const dynamic = "force-dynamic";
 
 export default function AddPost() {
   const [title, setTitle] = useState("");

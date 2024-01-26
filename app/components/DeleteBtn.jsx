@@ -10,10 +10,10 @@ export default function DeleteBtn({ postId }) {
       await fetch(`/api/post/${postId}`, {
         method: "DELETE",
       });
+      router.refresh();
     } catch (e) {
       console.error(e);
     }
-    router.refresh();
   }
 
   return <button onClick={handleClick}>Delete Post</button>;

@@ -7,9 +7,11 @@ export default function DeleteBtn({ postId }) {
 
   async function handleClick() {
     try {
+      console.log("Before DELETE request");
       await fetch(`/api/post/${postId}`, {
         method: "DELETE",
       });
+      console.log("After DELETE request");
       router.refresh();
     } catch (e) {
       console.error(e);

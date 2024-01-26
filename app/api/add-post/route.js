@@ -1,5 +1,6 @@
 import prisma from "../../../lib/prisma";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
+import { revalidatePath } from "next/cache";
 
 export async function POST(request) {
   const res = await request.json();
@@ -16,8 +17,8 @@ export async function POST(request) {
       },
     },
   });
+  const path = request.nextUrl.searchParams.get("path") || "/";
+  revalidatePath(path);
 
   return NextResponse.json({ result });
 }
-
-// pages/api/posts.js

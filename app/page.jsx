@@ -23,7 +23,7 @@ export default async function Home() {
       <Article />
       <div className="border-t mt-12 pt-12 pb-32 px-4 lg:px-0">
         <Link href={"/add-post"} className="text-lg  my-6">
-          Post a comment:
+          Post your comment:
         </Link>
         {posts.map((post) => {
           return (

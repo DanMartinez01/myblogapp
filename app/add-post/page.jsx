@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function AddPost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  // const router = useRouter();
+  const router = useRouter();
+  // router.refresh();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -67,6 +68,7 @@ export default function AddPost() {
           <button
             type="submit"
             className="border border-indigo-600 bg-black text-white rounded-lg py-2 px-4 font-semibold mt-10"
+            onClick={() => router.refresh()}
           >
             Submit
           </button>

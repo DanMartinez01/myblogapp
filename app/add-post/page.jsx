@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 export default function AddPost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -20,19 +20,15 @@ export default function AddPost() {
     event.preventDefault();
 
     try {
-      await fetch(
-        "/api/add-post",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ title, content }),
+      await fetch("/api/add-post", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        { cache: "no-store" }
-      );
+        body: JSON.stringify({ title, content }),
+      });
 
-      router.refresh();
+      // router.refresh();
     } catch (error) {
       console.error(error);
     }

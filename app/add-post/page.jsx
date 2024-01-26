@@ -29,7 +29,7 @@ export default function AddPost() {
         body: JSON.stringify({ title, content }),
       });
 
-      // router.refresh();
+      router.refresh();
     } catch (error) {
       console.error(error);
     }
@@ -68,7 +68,6 @@ export default function AddPost() {
           <button
             type="submit"
             className="border border-indigo-600 bg-black text-white rounded-lg py-2 px-4 font-semibold mt-10"
-            onClick={() => router.refresh()}
           >
             Submit
           </button>

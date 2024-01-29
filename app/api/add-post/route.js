@@ -20,5 +20,5 @@ export async function POST(request) {
   const path = request.nextUrl.searchParams.get("path") || "/";
   revalidatePath(path);
 
-  return NextResponse.json({ result });
+  return NextResponse.json({ result }, { revalidated: true, now: Date.now() });
 }

@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 
 export default function DeleteBtn({ postId }) {
   const router = useRouter();
-  // router.refresh();
 
   async function handleClick() {
     try {
@@ -12,6 +11,8 @@ export default function DeleteBtn({ postId }) {
         method: "DELETE",
       });
       console.log("After DELETE request");
+
+      // Refresh the page
       router.refresh();
     } catch (e) {
       console.error(e);

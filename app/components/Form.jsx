@@ -3,19 +3,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function AddPost() {
+export default function Form() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [author, setAuthor] = useState("");
   const router = useRouter();
   // router.refresh();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
-  };
-
-  const handleAuthorChange = (event) => {
-    setAuthor(event.target.value);
   };
 
   const handleContentChange = (event) => {
@@ -41,7 +36,6 @@ export default function AddPost() {
 
     setTitle("");
     setContent("");
-    setAuthor("");
   };
 
   return (
@@ -49,19 +43,8 @@ export default function AddPost() {
       <Link href={"/"}>View Feed</Link>
       <form onSubmit={handleSubmit} className="my-8">
         <h1>Add Comment:</h1>
-        {/* <div className="flex flex-col mt-4">
-          <label htmlFor="author">Author:</label>
-          <input
-            type="text"
-            id="author"
-            value={author}
-            onChange={handleAuthorChange}
-            required
-            className="text-black"
-          />
-        </div> */}
         <div className="flex flex-col mt-4">
-          <label htmlFor="title">Name:</label>
+          <label htmlFor="title">Title:</label>
           <input
             type="text"
             id="title"

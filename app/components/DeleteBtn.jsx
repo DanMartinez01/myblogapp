@@ -19,5 +19,9 @@ export default function DeleteBtn({ postId }) {
     }
   }
 
-  return <button onClick={handleClick}>Delete Post</button>;
+  return (
+    <button onClick={handleClick} className="hover:underline">
+      <small> Delete Post</small>
+    </button>
+  );
 }

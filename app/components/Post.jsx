@@ -23,12 +23,12 @@ export default function Post({ id, title, content, author }) {
           </div> */}
         </div>
       </div>
-      <div class="flex justify-end items-center text-xs w-full">
-        <div class="font-semibold text-gray-700 px-2 flex items-center justify-center space-x-1">
+      <div className="flex justify-end items-center text-xs w-full">
+        <div className="font-semibold text-gray-700 px-2 flex items-center justify-center space-x-1">
           <button className="hover:underline">
             <small>Like</small>
           </button>
-          <small class="self-center">.</small>
+          <small className="self-center">.</small>
           <DeleteBtn postId={id} />
         </div>
       </div>

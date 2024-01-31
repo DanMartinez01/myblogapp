@@ -46,7 +46,6 @@ export default function AddPost() {
 
   return (
     <div className="max-w-screen-sm w-2/4 my-2 px-4">
-      <Link href={"/"}>View Feed</Link>
       <form onSubmit={handleSubmit} className="my-8">
         <h1>Add Comment:</h1>
         {/* <div className="flex flex-col mt-4">
@@ -81,13 +80,16 @@ export default function AddPost() {
             className="text-black"
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col">
           <button
             type="submit"
-            className="border border-indigo-600 bg-black text-white rounded-lg py-2 px-4 font-semibold mt-10"
+            className="mx-auto border border-indigo-600 bg-black text-white rounded-lg py-2 px-4 font-semibold mt-10"
           >
             Submit
           </button>
+          <Link href={"/"} className="mx-auto mt-4">
+            View Feed
+          </Link>
         </div>
       </form>
     </div>

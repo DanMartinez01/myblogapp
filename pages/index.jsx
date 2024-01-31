@@ -4,6 +4,7 @@ import Post from "../app/components/Post";
 import Form from "@/app/components/Form";
 import Article from "../app/components/Article";
 import Footer from "../app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 // Example for importing global styles
 import "../styles/globals.css";
 
@@ -28,6 +29,7 @@ export default function Home({ posts }) {
   console.log(posts);
   return (
     <main className="flex flex-col max-w-screen-lg mx-auto">
+      <Navbar />
       <Article />
       <div className="border-t mt-10 pt-12 pb-32 px-4 lg:px-0">
         <Link

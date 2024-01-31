@@ -5,83 +5,12 @@ import Link from "next/link";
 const Article = () => {
   return (
     <div className="max-w-screen-lg mx-auto">
-      <header className="flex items-center justify-between py-2">
-        <a href="#" className="px-2 lg:px-0 font-bold">
-          Tech Blog
-        </a>
-        <button className="block md:hidden px-2 text-3xl">
-          <i className="bx bx-menu"></i>
-        </button>
-        <ul className="hidden md:inline-flex items-center">
-          <li className="px-2 md:px-4">
-            <a
-              href=""
-              className="text-green-800 font-semibold hover:text-green-600"
-            >
-              {" "}
-              Home{" "}
-            </a>
-          </li>
-          <li className="px-2 md:px-4">
-            <a
-              href=""
-              className="text-gray-500 font-semibold hover:text-green-600"
-            >
-              {" "}
-              About{" "}
-            </a>
-          </li>
-          <li className="px-2 md:px-4">
-            <a
-              href=""
-              className="text-gray-500 font-semibold hover:text-green-600"
-            >
-              {" "}
-              Press{" "}
-            </a>
-          </li>
-          <li className="px-2 md:px-4">
-            <a
-              href=""
-              className="text-gray-500 font-semibold hover:text-green-600"
-            >
-              {" "}
-              Contact{" "}
-            </a>
-          </li>
-          <li className="px-2 md:px-4 hidden md:block">
-            <a
-              href=""
-              className="text-gray-500 font-semibold hover:text-green-600"
-            >
-              {" "}
-              Login{" "}
-            </a>
-          </li>
-          <li className="px-2 md:px-4 hidden md:block">
-            <a
-              href=""
-              className="text-gray-500 font-semibold hover:text-green-600"
-            >
-              {" "}
-              Register{" "}
-            </a>
-          </li>
-        </ul>
-      </header>
-
       <main className="mt-10">
         <div className="mb-4 md:mb-0 w-full mx-auto relative">
           <div className="px-4 lg:px-0">
             <h2 className="text-4xl font-semibold text-white leading-tight">
-              Building a Next.js Blog with PostgreSQL, Prisma.
+              Building a Next.js Blog with PostgreSQL and Prisma.
             </h2>
-            <a
-              href="#"
-              className="py-2 text-green-700 inline-flex items-center justify-center mb-2"
-            >
-              Fullstack apps
-            </a>
           </div>
 
           {/* <Image src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" class="w-full object-cover lg:rounded" style="height: 28em;" alt="" width="100" height="100"/> */}

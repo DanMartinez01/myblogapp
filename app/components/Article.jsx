@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import profilePic from "../../public/profile.jpeg";
 
 const Article = () => {
   return (
@@ -12,12 +14,10 @@ const Article = () => {
               Building a Next.js Blog with PostgreSQL and Prisma.
             </h2>
           </div>
-
-          {/* <Image src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" class="w-full object-cover lg:rounded" style="height: 28em;" alt="" width="100" height="100"/> */}
         </div>
 
         <div className="flex flex-col lg:flex-row lg:space-x-12">
-          <div className="px-4 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+          <div className="px-4 lg:px-0 mt-12 text-gray-400 text-lg leading-relaxed w-full lg:w-3/4">
             <p className="pb-6">
               Hey fellow tech enthusiasts! 👋 I recently embarked on a thrilling
               journey of creating my very own blog app using Next.js, PostgreSQL
@@ -57,22 +57,25 @@ const Article = () => {
           </div>
 
           <div className="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
-            <div className="p-4 border-t border-b md:border md:rounded">
+            <div className="p-4 md:border-t md:border-b md:border md:rounded">
               <div className="flex py-2">
-                {/* <Image src="https://randomuser.me/api/portraits/men/97.jpg"
-                class="h-10 w-10 rounded-full mr-2 object-cover" alt='' /> */}
+                <Image
+                  src={profilePic}
+                  class="h-10 w-10 rounded-full mr-2 object-cover"
+                  alt=""
+                />
                 <div>
-                  <p className="font-semibold text-gray-700 text-sm">
+                  <p className="font-semibold text-gray-400 text-sm">
                     {" "}
                     Daniela Martinez{" "}
                   </p>
-                  <p className="font-semibold text-gray-600 text-xs">
+                  <p className="font-semibold text-gray-400 text-xs">
                     {" "}
                     Fullstack dev{" "}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-700 py-3">
+              <p className="text-gray-400 py-3">
                 I write about my journey learning new stuff.
               </p>
               <Link
